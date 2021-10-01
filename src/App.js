@@ -7,7 +7,7 @@ import Banner from './components/Banner';
 const theme = {
   colors: {
     darkGrey: 'hsl(0, 0%, 63%)',
-    vDarkGray: 'hsl(0, 0%, 27%)',
+    vDarkGrey: 'hsl(0, 0%, 27%)',
     black: 'hsl(0, 0%, 0%)',
     white: 'hsl(0, 0%, 100%)',
     greyFont: '#00000073',

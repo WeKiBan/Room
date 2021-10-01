@@ -1,6 +1,7 @@
 import React from 'react';
 import desktop from '../images/desktop-image-hero-1.jpg';
 import arrow from '../images/icon-arrow.svg';
+import Nav from './Nav';
 import {
   HeroStyled,
   ShopNow,
@@ -15,6 +16,7 @@ import buttonLeft from '../images/icon-angle-left.svg';
 function Hero() {
   return (
     <HeroStyled>
+      <Nav />
       <DeskStyled src={desktop} alt="desk" />
       <Container>
         <h1>Discover innovative ways to decorate</h1>
@@ -32,10 +34,10 @@ function Hero() {
           </span>
         </ShopNow>
         <Buttons>
-          <Button color="black">
+          <Button>
             <img src={buttonLeft} alt="right arrow" />
           </Button>
-          <Button color="hsl(0, 0%, 27%)">
+          <Button>
             <img src={buttonRight} alt="right arrow" />
           </Button>
         </Buttons>

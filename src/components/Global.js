@@ -19,7 +19,8 @@ body {
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding:0;
-  
+  height: ${window.innerHeight};
+  min-width: 1000px;
 }
 
 p {

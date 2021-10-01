@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const HeroStyled = styled.div`
+  position: relative;
   display: flex;
   min-height: 300px;
-  height: 70vh;
+  height: 70%;
   h1 {
     font-size: 45px;
     font-weight: 500;
@@ -50,7 +51,7 @@ export const ShopNow = styled.div`
 `;
 
 export const Buttons = styled.div`
-  background-color: grey;
+  background-color: ${({ theme }) => theme.colors.vDarkGrey};
   position: absolute;
   display: flex;
   justify-content: space-evenly;
@@ -69,5 +70,8 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   width: 50%;
-  background-color: ${({ color }) => color || 'green'}; ;
+  cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.black};
+  }
 `;

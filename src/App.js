@@ -15,8 +15,11 @@ const theme = {
   font: {
     bodySize: '10px',
   },
-  mobile: '375px',
-  desktop: '1440px',
+  breakpoints: {
+    mobile: '400px',
+    mid: '850px',
+    large: '1100px',
+  },
 };
 
 function App() {

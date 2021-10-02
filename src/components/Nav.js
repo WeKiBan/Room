@@ -6,17 +6,16 @@ function Nav() {
     <NavStyled>
       <h2>room</h2>
       <Link active={true}>
-        <a href="#">home</a>
+        <button>home</button>
       </Link>
       <Link active={true}>
-        <a href="#">shop</a>
+        <button>shop</button>
       </Link>
       <Link active={true}>
-        <a href="#">about</a>
+        <button>about</button>
       </Link>
-
       <Link active={true}>
-        <a href="#">contact</a>
+        <button>contact</button>
       </Link>
     </NavStyled>
   );

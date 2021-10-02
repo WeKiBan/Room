@@ -1,12 +1,12 @@
 import React from 'react';
 import { BannerStyled, Image, InfoDiv } from './Banner.styled';
-import table from '../images/image-about-dark.jpg';
-import chair from '../images/image-about-light.jpg';
+import desktopTable from '../images/image-about-dark.jpg';
+import desktopChair from '../images/image-about-light.jpg';
 
 function Banner() {
   return (
     <BannerStyled>
-      <Image src={table} />
+      <Image src={desktopTable} />
       <InfoDiv>
         <h2>ABOUT OUR FURNITURE</h2>
         <p>
@@ -18,7 +18,7 @@ function Banner() {
           dream space{' '}
         </p>
       </InfoDiv>
-      <Image src={chair} />
+      <Image src={desktopChair} />
     </BannerStyled>
   );
 }

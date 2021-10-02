@@ -1,23 +1,21 @@
 import React from 'react';
-import desktop from '../images/desktop-image-hero-1.jpg';
+import imageDesktop from '../images/desktop-image-hero-1.jpg';
+import imageMobile from '../images/mobile-image-hero-1.jpg';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
-import {
-  HeroStyled,
-  ShopNow,
-  Container,
-  Buttons,
-  DeskStyled,
-  Button,
-} from './styles/Hero.styled';
-import buttonRight from '../images/icon-angle-right.svg';
-import buttonLeft from '../images/icon-angle-left.svg';
+import { HeroStyled, ShopNow, Container, ImgDiv, Small, Big } from './styles/Hero.styled';
+import Buttons from './Buttons';
 
 function Hero() {
   return (
     <HeroStyled>
       <Nav />
-      <DeskStyled src={desktop} alt="desk" />
+      <ImgDiv img={[imageDesktop, imageMobile]} alt="desk">
+        <Small className="small">
+          <Buttons />
+        </Small>
+      </ImgDiv>
+
       <Container>
         <h1>Discover innovative ways to decorate</h1>
         <p>
@@ -33,14 +31,9 @@ function Hero() {
             <img src={arrow} alt="arrow" />
           </span>
         </ShopNow>
-        <Buttons>
-          <Button>
-            <img src={buttonLeft} alt="right arrow" />
-          </Button>
-          <Button>
-            <img src={buttonRight} alt="right arrow" />
-          </Button>
-        </Buttons>
+        <Big>
+          <Buttons />
+        </Big>
       </Container>
     </HeroStyled>
   );

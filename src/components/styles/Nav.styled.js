@@ -7,6 +7,7 @@ export const NavStyled = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1000;
   h2 {
     transform: scale(1, 0.8);
     margin-right: 2rem;
@@ -20,10 +21,12 @@ export const NavStyled = styled.nav`
     margin: 1rem;
     transform: scale(1, 0.9);
   }
-  a {
+  button {
     color: white;
-    font-size: 1.3rem;
-    text-decoration: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 `;
 

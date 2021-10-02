@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0px;
   padding:0px; 
 }
+
+html, body{
+  min-height: 100vh;
+}
 html{
   padding: 0;
   margin: 0;
@@ -19,8 +23,6 @@ body {
   font-family: 'Spartan', sans-serif;
   margin: 0;
   padding:0;
-  height: ${window.innerHeight};
-  min-width: 1000px;
 }
 
 p {
@@ -38,4 +40,7 @@ img{
   margin: 0;
   padding: 0;
 }
+.App{display: flex;
+  flex-direction: column;
+  min-height: 100vh;}
 `;

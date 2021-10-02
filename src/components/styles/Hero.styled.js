@@ -3,22 +3,29 @@ import styled from 'styled-components';
 export const HeroStyled = styled.div`
   position: relative;
   display: flex;
-  min-height: 300px;
-  height: 70%;
-  h1 {
-    font-size: 45px;
-    font-weight: 500;
-    letter-spacing: 0.04rem;
-    padding-bottom: 2rem;
-    color: ${({ theme }) => theme.colors.black};
-    line-height: 4.3rem;
-    transform: scale(0.98, 0.9);
+  width: 100%;
+  min-height: 400px;
+  height: 65vh;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    flex-direction: column;
+    height: auto;
   }
-  h6 {
-    font-size: 18px;
-    text-transform: capitalize !important ;
-    letter-spacing: 0.7rem;
-    font-weight: 300;
+`;
+
+export const ImgDiv = styled.div`
+  position: relative;
+  background-image: url(${({ img }) => img[0]});
+  background-size: cover;
+  width: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    width: 100%;
+    height: 370px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    background-image: url(${({ img }) => img[1]});
   }
 `;
 
@@ -29,10 +36,45 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 100px;
-`;
+  width: 45%;
+  min-height: 400px;
+  h1 {
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    padding-bottom: 0.5rem;
+    color: ${({ theme }) => theme.colors.black};
+    line-height: 4.3rem;
+    transform: scale(0.98, 0.9);
+    @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+      line-height: 3rem;
+      font-size: 30px;
+    }
 
-export const DeskStyled = styled.img`
-  width: 80%;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+      line-height: 3.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  h6 {
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 0.7rem;
+    font-weight: 300;
+    transform: scale(0.98, 0.87);
+    @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+      color: ${({ theme }) => theme.colors.black};
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    padding: 40px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    width: 100%;
+    padding: 35px;
+  }
 `;
 
 export const ShopNow = styled.div`
@@ -50,28 +92,22 @@ export const ShopNow = styled.div`
   }
 `;
 
-export const Buttons = styled.div`
-  background-color: ${({ theme }) => theme.colors.vDarkGrey};
+export const Small = styled.div`
+  display: none;
   position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  width: 160px;
-  height: 80px;
   bottom: 0;
-  left: 0;
-  img {
-    width: 90%;
-    height: 100%;
-    padding: 28px;
+  right: 0;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    display: inline-block;
   }
 `;
 
-export const Button = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  cursor: pointer;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.black};
+export const Big = styled.div`
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @media (min-width: ${({ theme }) => theme.breakpoints.mid}) {
+    display: inline-block;
   }
 `;

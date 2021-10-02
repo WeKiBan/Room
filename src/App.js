@@ -17,7 +17,7 @@ const theme = {
   },
   breakpoints: {
     mobile: '400px',
-    mid: '850px',
+    mid: '900px',
     large: '1100px',
   },
 };

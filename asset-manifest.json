@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/room.git/static/js/main.155a37ce.chunk.js",
+    "main.js.map": "/room.git/static/js/main.155a37ce.chunk.js.map",
+    "runtime-main.js": "/room.git/static/js/runtime-main.21e12f5c.js",
+    "runtime-main.js.map": "/room.git/static/js/runtime-main.21e12f5c.js.map",
+    "static/js/2.ac30da06.chunk.js": "/room.git/static/js/2.ac30da06.chunk.js",
+    "static/js/2.ac30da06.chunk.js.map": "/room.git/static/js/2.ac30da06.chunk.js.map",
+    "index.html": "/room.git/index.html",
+    "static/js/2.ac30da06.chunk.js.LICENSE.txt": "/room.git/static/js/2.ac30da06.chunk.js.LICENSE.txt",
+    "static/media/desktop-image-hero-1.91901d0d.jpg": "/room.git/static/media/desktop-image-hero-1.91901d0d.jpg",
+    "static/media/icon-angle-left.d53877df.svg": "/room.git/static/media/icon-angle-left.d53877df.svg",
+    "static/media/icon-angle-right.0ed3f81f.svg": "/room.git/static/media/icon-angle-right.0ed3f81f.svg",
+    "static/media/icon-arrow.84087786.svg": "/room.git/static/media/icon-arrow.84087786.svg",
+    "static/media/image-about-dark.329bbc44.jpg": "/room.git/static/media/image-about-dark.329bbc44.jpg",
+    "static/media/mobile-image-hero-1.5de3d147.jpg": "/room.git/static/media/mobile-image-hero-1.5de3d147.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21e12f5c.js",
+    "static/js/2.ac30da06.chunk.js",
+    "static/js/main.155a37ce.chunk.js"
+  ]
+}

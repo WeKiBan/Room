@@ -1,30 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imageDesktop from '../images/desktop-image-hero-1.jpg';
 import imageMobile from '../images/mobile-image-hero-1.jpg';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
-import { HeroStyled, ShopNow, Container, ImgDiv, Small, Big } from './styles/Hero.styled';
+import {
+  HeroStyled,
+  ShopNow,
+  Container,
+  ImgDiv,
+  Small,
+  Big,
+} from './styles/Hero.styled';
 import Buttons from './Buttons';
+import { heroAssets } from '../data';
 
 function Hero() {
+  const [slideNum, setSlideNum] = useState(0);
+  const { title, paragraph, images } = heroAssets[slideNum];
+  const slideUp = () => {
+    if (slideNum === 2) {
+      setSlideNum(0);
+    } else {
+      const newSlideNum = slideNum + 1;
+      setSlideNum(newSlideNum);
+    }
+  };
+  const slideDown = () => {
+    if (slideNum === 0) {
+      setSlideNum(2);
+    } else {
+      const newSlideNum = slideNum - 1;
+      setSlideNum(newSlideNum);
+    }
+  };
   return (
     <HeroStyled>
       <Nav />
-      <ImgDiv img={[imageDesktop, imageMobile]} alt="desk">
+      <ImgDiv img={[images[0], images[1]]} alt="desk">
         <Small className="small">
-          <Buttons />
+          <Buttons slideUp={slideUp} slideDown={slideDown} />
         </Small>
       </ImgDiv>
 
       <Container>
-        <h1>Discover innovative ways to decorate</h1>
-        <p>
-          We provide unmatched quality, comfort and style for property owners
-          across the county. Our experts combine form and function in bringing
-          your vision to life. Create a room in your own style with our
-          collection and make your property a reflection of you and what you
-          love.
-        </p>
+        <h1>{title}</h1>
+        <p>{paragraph}</p>
         <ShopNow>
           <h6>SHOP NOW</h6>
           <span>
@@ -32,7 +52,7 @@ function Hero() {
           </span>
         </ShopNow>
         <Big>
-          <Buttons />
+          <Buttons slideUp={slideUp} slideDown={slideDown} />
         </Big>
       </Container>
     </HeroStyled>

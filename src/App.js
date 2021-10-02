@@ -3,6 +3,7 @@ import { GlobalStyle } from './components/Global';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';
 import Banner from './components/Banner';
+import { bannerAssets, heroAssets } from './data';
 
 const theme = {
   colors: {
@@ -27,8 +28,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App">
-        <Hero />
-        <Banner />
+        <Hero  />
+        <Banner/>
       </div>
     </ThemeProvider>
   );

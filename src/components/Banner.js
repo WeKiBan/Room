@@ -2,10 +2,11 @@ import React from 'react';
 import { BannerStyled, Image, InfoDiv } from './Banner.styled';
 import desktopTable from '../images/image-about-dark.jpg';
 import desktopChair from '../images/image-about-light.jpg';
+import { bannerAssets } from '../data';
 
 function Banner() {
   return (
-    <BannerStyled>
+    <BannerStyled bannerAssets={bannerAssets}>
       <Image src={desktopTable} />
       <InfoDiv>
         <h2>ABOUT OUR FURNITURE</h2>

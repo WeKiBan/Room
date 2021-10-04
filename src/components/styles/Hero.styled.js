@@ -39,11 +39,12 @@ export const Container = styled.div`
   padding: 100px;
   width: 45%;
   min-height: 400px;
+  letter-spacing: 0.2rem;
   h1 {
     font-family: ${({ theme }) => theme.font.fontFamily};
     font-size: 45px;
-    font-weight: 500;
-    letter-spacing: 0.04rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
     padding-bottom: 0.5rem;
     color: ${({ theme }) => theme.colors.black};
     line-height: 4.3rem;

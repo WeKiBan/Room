@@ -32,7 +32,8 @@ export const InfoDiv = styled.div`
   width: 40%;
   h2 {
     font-family: ${({ theme }) => theme.font.fontFamily};
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
     padding-bottom: 1rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {

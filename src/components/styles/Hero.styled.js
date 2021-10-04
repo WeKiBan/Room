@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const HeroStyled = styled.div`
+  font-family: ${({ theme }) => theme.font.fontFamily};
   user-select: none;
   position: relative;
   display: flex;
   width: 100%;
   min-height: 400px;
   height: 65vh;
-
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
     flex-direction: column;
     height: auto;
@@ -40,13 +40,13 @@ export const Container = styled.div`
   width: 45%;
   min-height: 400px;
   h1 {
+    font-family: ${({ theme }) => theme.font.fontFamily};
     font-size: 45px;
     font-weight: 500;
     letter-spacing: 0.04rem;
     padding-bottom: 0.5rem;
     color: ${({ theme }) => theme.colors.black};
     line-height: 4.3rem;
-    transform: scale(0.98, 0.9);
     @media (max-width: 1170px) {
       line-height: 3rem;
       font-size: 30px;
@@ -59,11 +59,11 @@ export const Container = styled.div`
   }
 
   h6 {
+    font-family: ${({ theme }) => theme.font.fontFamily};
     font-size: 18px;
     text-transform: capitalize;
     letter-spacing: 0.7rem;
     font-weight: 300;
-    transform: scale(0.98, 0.87);
     @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
       color: ${({ theme }) => theme.colors.black};
     }

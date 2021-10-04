@@ -22,6 +22,7 @@ export const Image = styled.img`
 `;
 
 export const InfoDiv = styled.div`
+  font-family: ${({ theme }) => theme.font.fontFamily};
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -30,8 +31,8 @@ export const InfoDiv = styled.div`
   margin: 50px;
   width: 40%;
   h2 {
+    font-family: ${({ theme }) => theme.font.fontFamily};
     letter-spacing: 0.3rem;
-    transform: scale(0.98, 0.9);
     padding-bottom: 1rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {

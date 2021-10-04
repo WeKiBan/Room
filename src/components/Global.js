@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,8 +19,8 @@ html{
 }
 body {
   background:${({ theme }) => theme.colors.white};
+  font-family:${({ theme }) => theme.font.fontFamily};
   color: hsl(192, 100%, 9%);
-  font-family: 'Spartan', sans-serif;
   margin: 0;
   padding:0;
 }

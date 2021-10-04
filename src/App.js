@@ -14,6 +14,7 @@ const theme = {
   },
   font: {
     bodySize: '10px',
+    fontFamily: "'Roboto', sans-serif",
   },
   breakpoints: {
     mobile: '400px',

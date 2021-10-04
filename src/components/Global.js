@@ -31,7 +31,7 @@ p {
     color: #00000073;
     letter-spacing: 0.02em;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
     transform: scale(1, 0.9);
 }
 

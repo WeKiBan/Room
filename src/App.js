@@ -1,10 +1,8 @@
 import React from 'react';
-import BrowserRouter from 'react-router-dom/BrowserRouter'
 import { GlobalStyle } from './components/Global';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';
 import Banner from './components/Banner';
-
 
 const theme = {
   colors: {
@@ -29,8 +27,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App">
-        <Hero  />
-        <Banner/>
+        <Hero />
+        <Banner />
       </div>
     </ThemeProvider>
   );

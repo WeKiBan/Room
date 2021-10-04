@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/room.git/static/js/main.7ee0f405.chunk.js",
-    "main.js.map": "/room.git/static/js/main.7ee0f405.chunk.js.map",
-    "runtime-main.js": "/room.git/static/js/runtime-main.21e12f5c.js",
-    "runtime-main.js.map": "/room.git/static/js/runtime-main.21e12f5c.js.map",
-    "static/js/2.cce75a9b.chunk.js": "/room.git/static/js/2.cce75a9b.chunk.js",
-    "static/js/2.cce75a9b.chunk.js.map": "/room.git/static/js/2.cce75a9b.chunk.js.map",
-    "index.html": "/room.git/index.html",
-    "static/js/2.cce75a9b.chunk.js.LICENSE.txt": "/room.git/static/js/2.cce75a9b.chunk.js.LICENSE.txt",
-    "static/media/desktop-image-hero-1.91901d0d.jpg": "/room.git/static/media/desktop-image-hero-1.91901d0d.jpg",
-    "static/media/desktop-image-hero-2.9d354056.jpg": "/room.git/static/media/desktop-image-hero-2.9d354056.jpg",
-    "static/media/desktop-image-hero-3.05fd679a.jpg": "/room.git/static/media/desktop-image-hero-3.05fd679a.jpg",
-    "static/media/icon-angle-left.d53877df.svg": "/room.git/static/media/icon-angle-left.d53877df.svg",
-    "static/media/icon-angle-right.0ed3f81f.svg": "/room.git/static/media/icon-angle-right.0ed3f81f.svg",
-    "static/media/icon-arrow.84087786.svg": "/room.git/static/media/icon-arrow.84087786.svg",
-    "static/media/image-about-dark.329bbc44.jpg": "/room.git/static/media/image-about-dark.329bbc44.jpg",
-    "static/media/mobile-image-hero-1.5de3d147.jpg": "/room.git/static/media/mobile-image-hero-1.5de3d147.jpg",
-    "static/media/mobile-image-hero-2.51db290a.jpg": "/room.git/static/media/mobile-image-hero-2.51db290a.jpg",
-    "static/media/mobile-image-hero-3.601d0f37.jpg": "/room.git/static/media/mobile-image-hero-3.601d0f37.jpg"
+    "main.js": "/room/static/js/main.7ee0f405.chunk.js",
+    "main.js.map": "/room/static/js/main.7ee0f405.chunk.js.map",
+    "runtime-main.js": "/room/static/js/runtime-main.59d2ce3c.js",
+    "runtime-main.js.map": "/room/static/js/runtime-main.59d2ce3c.js.map",
+    "static/js/2.1c7afc07.chunk.js": "/room/static/js/2.1c7afc07.chunk.js",
+    "static/js/2.1c7afc07.chunk.js.map": "/room/static/js/2.1c7afc07.chunk.js.map",
+    "index.html": "/room/index.html",
+    "static/js/2.1c7afc07.chunk.js.LICENSE.txt": "/room/static/js/2.1c7afc07.chunk.js.LICENSE.txt",
+    "static/media/desktop-image-hero-1.91901d0d.jpg": "/room/static/media/desktop-image-hero-1.91901d0d.jpg",
+    "static/media/desktop-image-hero-2.9d354056.jpg": "/room/static/media/desktop-image-hero-2.9d354056.jpg",
+    "static/media/desktop-image-hero-3.05fd679a.jpg": "/room/static/media/desktop-image-hero-3.05fd679a.jpg",
+    "static/media/icon-angle-left.d53877df.svg": "/room/static/media/icon-angle-left.d53877df.svg",
+    "static/media/icon-angle-right.0ed3f81f.svg": "/room/static/media/icon-angle-right.0ed3f81f.svg",
+    "static/media/icon-arrow.84087786.svg": "/room/static/media/icon-arrow.84087786.svg",
+    "static/media/image-about-dark.329bbc44.jpg": "/room/static/media/image-about-dark.329bbc44.jpg",
+    "static/media/mobile-image-hero-1.5de3d147.jpg": "/room/static/media/mobile-image-hero-1.5de3d147.jpg",
+    "static/media/mobile-image-hero-2.51db290a.jpg": "/room/static/media/mobile-image-hero-2.51db290a.jpg",
+    "static/media/mobile-image-hero-3.601d0f37.jpg": "/room/static/media/mobile-image-hero-3.601d0f37.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.21e12f5c.js",
-    "static/js/2.cce75a9b.chunk.js",
+    "static/js/runtime-main.59d2ce3c.js",
+    "static/js/2.1c7afc07.chunk.js",
     "static/js/main.7ee0f405.chunk.js"
   ]
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import BrowserRouter from 'react-router-dom/BrowserRouter'
 import { GlobalStyle } from './components/Global';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroStyled = styled.div`
+  user-select: none;
   position: relative;
   display: flex;
   width: 100%;
@@ -46,7 +47,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.black};
     line-height: 4.3rem;
     transform: scale(0.98, 0.9);
-    @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    @media (max-width: 1170px) {
       line-height: 3rem;
       font-size: 30px;
     }
@@ -79,12 +80,19 @@ export const Container = styled.div`
 
 export const ShopNow = styled.div`
   margin-top: 2.5rem;
+  user-select: none;
   width: 100%;
   color: ${({ theme }) => theme.colors.greyFont};
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(0.98);
+  }
+
   img {
     opacity: 0.4;
     width: 40px;
@@ -95,6 +103,8 @@ export const ShopNow = styled.div`
 export const Small = styled.div`
   display: none;
   position: absolute;
+  width: 130px;
+  height: 65px;
   bottom: 0;
   right: 0;
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
@@ -105,6 +115,8 @@ export const Small = styled.div`
 export const Big = styled.div`
   display: none;
   position: absolute;
+  width: 160px;
+  height: 80px;
   bottom: 0;
   left: 0;
   @media (min-width: ${({ theme }) => theme.breakpoints.mid}) {

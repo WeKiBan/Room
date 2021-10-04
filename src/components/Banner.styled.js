@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const BannerStyled = styled.div`
   display: flex;
+  user-select: none;
   height: 1000px;
   min-height: 200px;
   height: 35vh;

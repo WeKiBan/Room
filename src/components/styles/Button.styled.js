@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const ButtonsStyled = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
+  user-select: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 160px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   div {
     display: flex;
     justify-content: center;
@@ -18,8 +19,8 @@ export const ButtonsStyled = styled.div`
       background-color: ${({ theme }) => theme.colors.vDarkGrey};
     }
     img {
-      height: 50%;
-      width: 30%;
+      height: 35%;
+      width: 25%;
     }
   }
 `;

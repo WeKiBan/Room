@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import imageDesktop from '../images/desktop-image-hero-1.jpg';
-import imageMobile from '../images/mobile-image-hero-1.jpg';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
 import {

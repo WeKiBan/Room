@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
 import {
@@ -6,6 +8,7 @@ import {
   ShopNow,
   Container,
   ImgDiv,
+  ImgContainer,
   Small,
   Big,
 } from './styles/Hero.styled';
@@ -34,11 +37,26 @@ function Hero() {
   return (
     <HeroStyled>
       <Nav />
-      <ImgDiv img={[images[0], images[1]]} alt="desk">
+      <ImgContainer>
+        <Swiper
+          className="swiper"
+          slidesPerView={1}
+          loop="true"
+          nextButton=".next-button"
+          previousButton=".previous-button"
+          centeredSlides
+          onSlideChange={() => console.log('slide change')}
+        >
+          {heroAssets.map((asset, index) => (
+            <SwiperSlide key={asset.id}>
+              <ImgDiv img={asset.images} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <Small className="small">
           <Buttons slideUp={slideUp} slideDown={slideDown} />
         </Small>
-      </ImgDiv>
+      </ImgContainer>
 
       <Container>
         <h1>{title}</h1>

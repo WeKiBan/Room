@@ -28,6 +28,9 @@ export const NavStyled = styled.nav`
     border: none;
     cursor: pointer;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    display: none;
+  }
 `;
 
 export const Link = styled.li`

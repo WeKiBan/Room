@@ -12,19 +12,28 @@ export const HeroStyled = styled.div`
     flex-direction: column;
     height: auto;
   }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
-export const ImgDiv = styled.div`
+export const ImgContainer = styled.div`
   position: relative;
-  background-image: url(${({ img }) => img[0]});
-  background-size: cover;
   width: 55%;
-  background-position: center;
-  background-repeat: no-repeat;
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
     width: 100%;
     height: 370px;
   }
+`;
+
+export const ImgDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(${({ img }) => img[0]});
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     background-image: url(${({ img }) => img[1]});
   }
@@ -108,6 +117,7 @@ export const Small = styled.div`
   height: 65px;
   bottom: 0;
   right: 0;
+  z-index: 1000;
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
     display: inline-block;
   }
@@ -120,6 +130,7 @@ export const Big = styled.div`
   height: 80px;
   bottom: 0;
   left: 0;
+  z-index: 1000;
   @media (min-width: ${({ theme }) => theme.breakpoints.mid}) {
     display: inline-block;
   }

@@ -40,7 +40,9 @@ img{
   margin: 0;
   padding: 0;
 }
-.App{display: flex;
+.App{
+  position: relative;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;}
 `;

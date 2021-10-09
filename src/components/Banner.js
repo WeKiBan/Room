@@ -16,7 +16,7 @@ function Banner() {
           best expresses your interests and what inspires you. Find furniture
           pieces you need, from traditional to contemporary styles or anything
           in between. Product specialists are available to help you create your
-          dream space{' '}
+          dream space
         </p>
       </InfoDiv>
       <Image src={desktopChair} />

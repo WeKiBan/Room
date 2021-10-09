@@ -5,16 +5,16 @@ function Nav() {
   return (
     <NavStyled>
       <h2>room</h2>
-      <Link active={true}>
+      <Link>
         <button>home</button>
       </Link>
-      <Link active={true}>
+      <Link>
         <button>shop</button>
       </Link>
-      <Link active={true}>
+      <Link>
         <button>about</button>
       </Link>
-      <Link active={true}>
+      <Link>
         <button>contact</button>
       </Link>
     </NavStyled>

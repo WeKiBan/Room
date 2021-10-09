@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GlobalStyle } from './components/Global';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';
 import Banner from './components/Banner';
+import MobileNav from './components/MobileNav';
 
 const theme = {
   colors: {
@@ -24,11 +25,19 @@ const theme = {
 };
 
 function App() {
+  const [navIsOpen, setNavIsOpen] = useState(false);
+  const handleOpenCloseNav = () => {
+    setNavIsOpen(!navIsOpen);
+  };
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App">
-        <Hero />
+        <MobileNav
+          handleOpenCloseNav={handleOpenCloseNav}
+          navIsOpen={navIsOpen}
+        />
+        <Hero handleOpenCloseNav={handleOpenCloseNav} />
         <Banner />
       </div>
     </ThemeProvider>

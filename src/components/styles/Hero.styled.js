@@ -16,6 +16,28 @@ export const HeroStyled = styled.div`
     width: 100%;
     height: 100%;
   }
+  .toggleButton {
+    display: none;
+    position: absolute;
+    border: none;
+    background: none;
+    z-index: 1000;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    cursor: pointer;
+    transition: transform ease-in 0.33s;
+    &:hover {
+      transform: scale(0.9);
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+      display: inline;
+    }
+    .icon {
+      font-size: 30px;
+      color: white;
+    }
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -65,6 +87,7 @@ export const Container = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
       line-height: 3.5rem;
       padding-bottom: 1rem;
+      text-align: center;
     }
   }
 
@@ -85,6 +108,9 @@ export const Container = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
     width: 100%;
     padding: 35px;
+    p {
+      text-align: center;
+    }
   }
 `;
 
@@ -102,11 +128,13 @@ export const ShopNow = styled.div`
   &:hover {
     transform: scale(0.98);
   }
-
   img {
     opacity: 0.4;
     width: 40px;
     margin-left: 3rem;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
+    justify-content: center;
   }
 `;
 

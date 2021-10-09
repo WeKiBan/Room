@@ -35,6 +35,7 @@ export const NavStyled = styled.nav`
 
 export const Link = styled.li`
   position: relative;
+
   &:hover {
     &:after {
       content: '';

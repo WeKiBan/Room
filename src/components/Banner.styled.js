@@ -41,6 +41,8 @@ export const InfoDiv = styled.div`
     padding: 40px;
     min-height: 400px;
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     margin: 0;

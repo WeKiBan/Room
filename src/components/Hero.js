@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
+import { FaBars } from 'react-icons/fa';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
 import {
@@ -15,7 +16,7 @@ import {
 import Buttons from './Buttons';
 import { heroAssets } from '../data';
 
-function Hero() {
+function Hero({ handleOpenCloseNav }) {
   const [slideNum, setSlideNum] = useState(0);
   const { title, paragraph, images } = heroAssets[slideNum];
   const slideUp = () => {
@@ -36,17 +37,12 @@ function Hero() {
   };
   return (
     <HeroStyled>
+      <button onClick={() => handleOpenCloseNav()} className="toggleButton">
+        <FaBars className="icon" />
+      </button>
       <Nav />
       <ImgContainer>
-        <Swiper
-          className="swiper"
-          slidesPerView={1}
-          loop="true"
-          nextButton=".next-button"
-          previousButton=".previous-button"
-          centeredSlides
-          onSlideChange={() => console.log('slide change')}
-        >
+        <Swiper className="swiper" slidesPerView={1} loop="true" centeredSlides>
           {heroAssets.map((asset, index) => (
             <SwiperSlide key={asset.id}>
               <ImgDiv img={asset.images} />

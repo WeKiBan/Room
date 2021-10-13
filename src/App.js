@@ -56,7 +56,11 @@ function App() {
           />
         )}
 
-        <Hero windowSize={windowSize} handleOpenCloseNav={handleOpenCloseNav} />
+        <Hero
+          navIsOpen={navIsOpen}
+          windowSize={windowSize}
+          handleOpenCloseNav={handleOpenCloseNav}
+        />
         <Banner />
       </div>
     </ThemeProvider>

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HeroStyled = styled.div`
-  font-family: ;
   user-select: none;
   position: relative;
   display: flex;
@@ -10,11 +9,11 @@ export const HeroStyled = styled.div`
   height: 65vh;
 
   .toggleButton {
-    display: none;
+    display: 'none';
+    z-index: 1;
     position: absolute;
     border: none;
     background: none;
-    z-index: 1000;
     left: 10px;
     top: 10px;
     width: 40px;

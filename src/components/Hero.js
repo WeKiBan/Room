@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import arrow from '../images/icon-arrow.svg';
 import { HeroStyled } from './styles/Hero.styled';
 import Buttons from './Buttons';
 import { heroAssets } from '../data';
 
-function Hero({ handleOpenCloseNav, windowSize }) {
+function Hero({ handleOpenCloseNav, windowSize, isNavOpen }) {
   const [slideNum, setSlideNum] = useState(0);
   const { title, paragraph, images } = heroAssets[slideNum];
 
@@ -26,7 +26,7 @@ function Hero({ handleOpenCloseNav, windowSize }) {
     }
   };
   return (
-    <HeroStyled image={images[windowSize > 400 ? 0 : 1]}>
+    <HeroStyled image={images[windowSize > 400 ? 0 : 1]} isNavOpen={isNavOpen}>
       <button onClick={() => handleOpenCloseNav()} className="toggleButton">
         <FaBars className="icon" />
       </button>

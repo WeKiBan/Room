@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 export const MobileNavStyled = styled.nav`
-  display: none;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 1000;
   background-color: white;
+  transition: height 0.4s ease-in-out;
   height: ${({ navIsOpen }) => (navIsOpen ? '100px' : '0')};
   overflow: hidden;
   .closeButton {
@@ -19,12 +22,6 @@ export const MobileNavStyled = styled.nav`
     .icon {
       font-size: 25px;
     }
-  }
-  transition: height 0.4s ease-in-out;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mid}) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 `;
 

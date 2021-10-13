@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './app.css';
 import { GlobalStyle } from './components/Global';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/Hero';
 import Banner from './components/Banner';
 import MobileNav from './components/MobileNav';
+import Nav from './components/Nav';
 
 const theme = {
   colors: {
@@ -25,6 +27,18 @@ const theme = {
 };
 
 function App() {
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      const newSize = window.innerWidth;
+      setWindowSize(newSize);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const [navIsOpen, setNavIsOpen] = useState(false);
   const handleOpenCloseNav = () => {
     setNavIsOpen(!navIsOpen);
@@ -33,11 +47,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App">
-        <MobileNav
-          handleOpenCloseNav={handleOpenCloseNav}
-          navIsOpen={navIsOpen}
-        />
-        <Hero handleOpenCloseNav={handleOpenCloseNav} />
+        {windowSize > 900 ? (
+          <Nav />
+        ) : (
+          <MobileNav
+            handleOpenCloseNav={handleOpenCloseNav}
+            navIsOpen={navIsOpen}
+          />
+        )}
+
+        <Hero windowSize={windowSize} handleOpenCloseNav={handleOpenCloseNav} />
         <Banner />
       </div>
     </ThemeProvider>

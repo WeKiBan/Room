@@ -3,7 +3,7 @@ import { ButtonsStyled } from './styles/Button.styled';
 import buttonRight from '../images/icon-angle-right.svg';
 import buttonLeft from '../images/icon-angle-left.svg';
 
-function Buttons({ slideUp, slideDown }) {
+function Buttons({ slideUp, slideDown, navigationPrevRef, navigationNextRef }) {
   const handleSlideUp = () => {
     slideUp();
   };
@@ -14,10 +14,10 @@ function Buttons({ slideUp, slideDown }) {
 
   return (
     <ButtonsStyled>
-      <div onClick={() => handleSlideUp()}>
-        <img src={buttonLeft} alt="right arrow" />
+      <div ref={navigationPrevRef} onClick={() => handleSlideDown()}>
+        <img src={buttonLeft} alt="left arrow" />
       </div>
-      <div onClick={() => handleSlideDown()}>
+      <div ref={navigationNextRef} onClick={() => handleSlideUp()}>
         <img src={buttonRight} alt="right arrow" />
       </div>
     </ButtonsStyled>

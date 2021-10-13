@@ -30,7 +30,6 @@ export const HeroStyled = styled.div`
   .imgContainer {
     position: relative;
     width: 55%;
-    background-image: url(${({ image }) => image});
     background-size: cover;
     background-position: center;
   }

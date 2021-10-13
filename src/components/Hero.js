@@ -8,6 +8,7 @@ import { heroAssets } from '../data';
 function Hero({ handleOpenCloseNav, windowSize, isNavOpen }) {
   const [slideNum, setSlideNum] = useState(0);
   const { title, paragraph, images } = heroAssets[slideNum];
+  console.log(images[0]);
 
   const slideUp = () => {
     if (slideNum === 2) {
@@ -26,11 +27,16 @@ function Hero({ handleOpenCloseNav, windowSize, isNavOpen }) {
     }
   };
   return (
-    <HeroStyled image={images[windowSize > 400 ? 0 : 1]} isNavOpen={isNavOpen}>
-      <button onClick={() => handleOpenCloseNav()} className="toggleButton">
-        <FaBars className="icon" />
-      </button>
-      <div className="imgContainer">
+    <HeroStyled isNavOpen={isNavOpen}>
+      {windowSize < 900 && (
+        <button onClick={() => handleOpenCloseNav()} className="toggleButton">
+          <FaBars className="icon" />
+        </button>
+      )}
+      <div
+        className="imgContainer"
+        style={{ backgroundImage: `url(${images[windowSize > 400 ? 0 : 1]})` }}
+      >
         {windowSize <= 900 && (
           <div className="smallButtons">
             <Buttons slideUp={slideUp} slideDown={slideDown} />

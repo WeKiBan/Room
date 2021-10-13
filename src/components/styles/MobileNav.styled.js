@@ -19,8 +19,13 @@ export const MobileNavStyled = styled.nav`
     top: 18px;
     border: none;
     background: none;
+    cursor: pointer;
+    transition: transform ease-in 0.33s;
     .icon {
       font-size: 25px;
+    }
+    &:hover {
+      transform: scale(0.9);
     }
   }
 `;
@@ -29,4 +34,8 @@ export const Link = styled.button`
   background: none;
   border: none;
   margin: 15px;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px black solid;
+  }
 `;

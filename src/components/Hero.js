@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
+import React, { useState, useRef } from 'react';
 import { FaBars } from 'react-icons/fa';
 import arrow from '../images/icon-arrow.svg';
 import Nav from './Nav';
+import ImageCarousel from './ImageCarousel';
 import {
   HeroStyled,
   ShopNow,
   Container,
-  ImgDiv,
   ImgContainer,
   Small,
   Big,
@@ -17,6 +15,7 @@ import Buttons from './Buttons';
 import { heroAssets } from '../data';
 
 function Hero({ handleOpenCloseNav }) {
+  const sliderRef = useRef();
   const [slideNum, setSlideNum] = useState(0);
   const { title, paragraph, images } = heroAssets[slideNum];
   const slideUp = () => {
@@ -42,13 +41,7 @@ function Hero({ handleOpenCloseNav }) {
       </button>
       <Nav />
       <ImgContainer>
-        <Swiper className="swiper" slidesPerView={1} loop="true" centeredSlides>
-          {heroAssets.map((asset, index) => (
-            <SwiperSlide key={asset.id}>
-              <ImgDiv img={asset.images} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <ImageCarousel />
         <Small className="small">
           <Buttons slideUp={slideUp} slideDown={slideDown} />
         </Small>
@@ -64,7 +57,11 @@ function Hero({ handleOpenCloseNav }) {
           </span>
         </ShopNow>
         <Big>
-          <Buttons slideUp={slideUp} slideDown={slideDown} />
+          <Buttons
+            sliderRef={sliderRef}
+            slideUp={slideUp}
+            slideDown={slideDown}
+          />
         </Big>
       </Container>
     </HeroStyled>

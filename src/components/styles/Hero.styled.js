@@ -16,6 +16,10 @@ export const HeroStyled = styled.div`
     width: 100%;
     height: 100%;
   }
+  .swiperSlide {
+    background-image: url(${({ img }) => img});
+    background: red;
+  }
   .toggleButton {
     display: none;
     position: absolute;
@@ -55,10 +59,6 @@ export const ImgDiv = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(${({ img }) => img[0]});
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    background-image: url(${({ img }) => img[1]});
-  }
 `;
 
 export const Container = styled.div`

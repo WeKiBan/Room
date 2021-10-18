@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FaBars } from 'react-icons/fa';
 import arrow from '../images/icon-arrow.svg';
 import { HeroStyled } from './styles/Hero.styled';
@@ -8,24 +8,37 @@ import { heroAssets } from '../data';
 function Hero({ handleOpenCloseNav, windowSize, isNavOpen }) {
   const [slideNum, setSlideNum] = useState(0);
   const { title, paragraph, images } = heroAssets[slideNum];
-  console.log(images[0]);
 
-  const slideUp = () => {
+  const slideUp = useCallback(() => {
     if (slideNum === 2) {
       setSlideNum(0);
     } else {
       const newSlideNum = slideNum + 1;
       setSlideNum(newSlideNum);
     }
-  };
-  const slideDown = () => {
+  }, [slideNum]);
+
+  const slideDown = useCallback(() => {
     if (slideNum === 0) {
       setSlideNum(2);
     } else {
       const newSlideNum = slideNum - 1;
       setSlideNum(newSlideNum);
     }
-  };
+  }, [slideNum]);
+
+  useEffect(() => {
+    const handleKeyup = (e) => {
+      if ((e.keyCode === 32) | (e.keyCode === 39)) {
+        slideUp();
+      } else if (e.keyCode === 37) {
+        slideDown();
+      }
+    };
+    window.addEventListener('keyup', handleKeyup);
+    return () => window.removeEventListener('keyup', handleKeyup);
+  }, [slideUp, slideDown]);
+
   return (
     <HeroStyled isNavOpen={isNavOpen}>
       {windowSize < 900 && (
@@ -34,6 +47,7 @@ function Hero({ handleOpenCloseNav, windowSize, isNavOpen }) {
         </button>
       )}
       <div
+        onClick={() => slideUp()}
         className="imgContainer"
         style={{ backgroundImage: `url(${images[windowSize > 400 ? 0 : 1]})` }}
       >

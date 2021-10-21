@@ -30,19 +30,19 @@ Users should be able to:
 
 ### What I learned
 
-This is the first project where I have used the Styled-Components library and so I had to learn everything from scratch which made the process a little slower. I really like the way all of the styling is written in the css syntax with the advantage of being able to pass variables as props to the components. I used this feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component as shown below:
+This is the first project where I have used the Styled-Components library and so I had to learn everything from scratch which made the process a little slower. I really like the way all of the styling is written in the css syntax with the advantage of being able to pass variables as props to the components. I used this feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component
 
 ```javascript
 <MobileNavStyled navIsOpen={navIsOpen}>
 ```
 
-I could then access this variable within the Styled-Component and then add styles accordingly as shown below:
+I could then access this variable within the Styled-Component and then add styles accordingly
 
 ```css
 height: ${({ navIsOpen }) => (navIsOpen ? '100px' : '0')};
 ```
 
-As there were two lots of pictures to be displayed on the website (one intended for mobile screens and the other for desktops) I decided to make useState hook to keep track of the window size and then the useEffect hook to add an event listener to the window resize event as shown below:
+As there were two lots of pictures to be displayed on the website (one intended for mobile screens and the other for desktops) I decided to make useState hook to keep track of the window size and then the useEffect hook to add an event listener to the window resize event
 
 ```javascript
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -53,7 +53,7 @@ As there were two lots of pictures to be displayed on the website (one intended 
   };
 ```
 
-This way I was able to use inline-styling to select either the desktop or mobile picture as shown below:
+This way I was able to use inline-styling to select either the desktop or mobile picture
 
 ```javascript
 <div

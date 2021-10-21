@@ -30,18 +30,41 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is the first project where I have used the Styled-Components library meaning I had to learn everything from scratch. I have found it incredibly intuitive and useful. I love the way all of the styling is written in the css syntax with the advantage of being able to to use variables passed as props to the components while at the same time not having to worry about class name bugs as the library takes care of all of that for us.
 
-To see how you can add code snippets, see below:
+During this project I think I've grasped a good knowledge of the Styled-Components Library. I have really enjoyed using it and of all of the tools I've used up until this point it is one of my favorites and I'm definitely going to be using it in future.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+One of the features of Styled-Components which proved very useful is the ability to pass props to each component which can then be accessed in the styling. I used the feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component as shown below:
+
+```javascript
+<MobileNavStyled navIsOpen={navIsOpen}>
 ```
 
+I could then access this variable within the Styled-Componenet and then add styles accordingly as shown below:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+height: ${({ navIsOpen }) => (navIsOpen ? '100px' : '0')};
+```
+
+As there were two lots of pictures to be displayed on the website (one intended for mobile screens and the other for desktops) I decided to make useState hook to keep track of the window size and then the useEffect hook to add an event listener to the window resize event as shown below:
+
+```javascript
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      const newSize = window.innerWidth;
+      setWindowSize(newSize);
+  };
+```
+
+Then in order to display the correct picture I used inline styling to select either the desktop or mobile picture as shown below:
+
+```javascript
+<div
+        onClick={() => slideUp()}
+        className="imgContainer"
+        style={{ backgroundImage: `url(${images[windowSize > 400 ? 0 : 1]})` }}
+      >
 ```
 
 ```js
@@ -49,8 +72,6 @@ const proudOfThisFunc = () => {
   console.log('🎉');
 };
 ```
-
-
 
 ### Continued development
 

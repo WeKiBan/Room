@@ -30,7 +30,7 @@ Users should be able to:
 
 ### What I learned
 
-This is the first project where I have used the Styled-Components library and so I had to learn everything from scratch which made the process a little slower. I really like the way all of the styling is written in the css syntax with the advantage of being able to to use variables passed as props to the components. I used this feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component as shown below:
+This is the first project where I have used the Styled-Components library and so I had to learn everything from scratch which made the process a little slower. I really like the way all of the styling is written in the css syntax with the advantage of being able to pass variables as props to the components. I used this feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component as shown below:
 
 ```javascript
 <MobileNavStyled navIsOpen={navIsOpen}>

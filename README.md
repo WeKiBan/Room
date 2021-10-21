@@ -30,9 +30,7 @@ Users should be able to:
 
 ### What I learned
 
-This is the first project where I have used the Styled-Components library meaning I had to learn everything from scratch. I have found it incredibly intuitive and useful. I love the way all of the styling is written in the css syntax with the advantage of being able to to use variables passed as props to the components while at the same time not having to worry about class name bugs as the library takes care of all of that for us.
-
-During this project I think I've grasped a good knowledge of the Styled-Components Library. I have really enjoyed using it and of all of the tools I've used up until this point it is one of my favorites and I'm definitely going to be using it in future.
+This is the first project where I have used the Styled-Components library and so I had to learn everything from scratch which made the process a little slower. I really like the way all of the styling is written in the css syntax with the advantage of being able to to use variables passed as props to the components and also not having to worry about class name bugs as the library takes care of all of that for us.
 
 One of the features of Styled-Components which proved very useful is the ability to pass props to each component which can then be accessed in the styling. I used the feature to open and close the mobile navbar by keeping track of the opening and closing using a useState hook and then passing that variable into the Styled-Component as shown below:
 
@@ -40,7 +38,7 @@ One of the features of Styled-Components which proved very useful is the ability
 <MobileNavStyled navIsOpen={navIsOpen}>
 ```
 
-I could then access this variable within the Styled-Componenet and then add styles accordingly as shown below:
+I could then access this variable within the Styled-Component and then add styles accordingly as shown below:
 
 ```css
 height: ${({ navIsOpen }) => (navIsOpen ? '100px' : '0')};
@@ -57,7 +55,7 @@ As there were two lots of pictures to be displayed on the website (one intended 
   };
 ```
 
-Then in order to display the correct picture I used inline styling to select either the desktop or mobile picture as shown below:
+This way I was able to use inline-styling to select either the desktop or mobile picture as shown below:
 
 ```javascript
 <div
@@ -67,35 +65,38 @@ Then in order to display the correct picture I used inline styling to select eit
       >
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
+During this project I think I've grasped a good knowledge of the Styled-Components Library. I have really enjoyed using it and of all of the tools I've used up until this point it is one of my favorites and I'm definitely going to be using it in future.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+As this project only Required me to build the landing page I could also come back and flesh out the project by building the rest of the site utilizing something like react-router
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Traversy Media Styled Components Crash Course & Project](https://www.youtube.com/watch?v=02zO0hZmwnw&t=276s) - This is the course I used to learn the basics of styled components. I found it very easy to follow and would definitely recommend it for anyone else looking to learn this technology.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+## Get started
 
-## Author
+### Clone this repository
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+From your command line, first clone this repo: https://github.com/WeKiBan/new-portfolio
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+`$ git clone https://github.com/WeKiBan/new-portfolio`
 
-## Acknowledgments
+### Go into the repository
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+`$ cd new-portfolio`
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+### Remove current origin repository
+
+`$ git remote remove origin`
+
+### Install dependencies
+
+`$ npm install`
+
+### Start development server
+
+`$ npm start`
+
+You should now have a development server running in your default browser.

@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/WeKiBan/Room)
-- Live Site URL: [Add live site URL here](https://wekiban.github.io/Room/)
+- Solution URL: [](https://github.com/WeKiBan/Room)
+- Live Site URL: [](https://wekiban.github.io/Room/)
 
 ### Built with
 
